@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { pool } = require('../config/db');
+const { pool } = require('../db');
 
 async function initializeDatabase() {
   console.log('Début de l\'initialisation de la base de données PostgreSQL...');
