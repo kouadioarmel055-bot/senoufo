@@ -1,4 +1,4 @@
-const { pool } = require('../config/db');
+const { pool } = require('../db');
 
 async function runMigration() {
   console.log('Exécution de la migration SQL...');
