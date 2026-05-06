@@ -1,4 +1,4 @@
-const { query } = require('../db');
+const { query } = require('./db');
 
 // Helper pour formater les mots selon ce qu'attend l'application Flutter (TranslationItem)
 const formatRows = (rows) => {
