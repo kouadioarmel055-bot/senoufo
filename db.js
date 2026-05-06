@@ -2,16 +2,20 @@ const { Pool } = require('pg');
 require('dotenv').config();
 
 // Configuration du pool de connexions PostgreSQL
+
 const poolConfig = process.env.DATABASE_URL
-  ? { connectionString: process.env.DATABASE_URL }
+  ? { 
+      connectionString: process.env.DATABASE_URL,
+      ssl: { rejectUnauthorized: false }
+    }
   : {
       host: process.env.DB_HOST || 'localhost',
       port: process.env.DB_PORT || 5432,
-      database: process.env.DB_NAME || 'senoufo_db',
+      database: process.env.DB_NAME || 'Ethnotech_Ci',
       user: process.env.DB_USER || 'postgres',
-      password: process.env.DB_PASSWORD || 'password',
+      password: process.env.DB_PASSWORD || '3262456870',
+      ssl: { rejectUnauthorized: false }
     };
-
 const pool = new Pool(poolConfig);
 
 // Événement en cas d'erreur inattendue sur un client inactif
