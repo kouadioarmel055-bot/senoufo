@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const dictController = require('../controllers/dictionary.controller');
+const dictController = require('../dictionary.controller');
 
 router.get('/translate/to-senoufo', dictController.translateToSenoufo);
 router.get('/translate/to-french', dictController.translateToFrench);
