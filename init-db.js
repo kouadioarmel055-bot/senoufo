@@ -1,13 +1,13 @@
 const fs = require('fs');
 const path = require('path');
-const { pool } = require('../db');
+const { pool } = require('./db');
 
 async function initializeDatabase() {
   console.log('Début de l\'initialisation de la base de données PostgreSQL...');
   
   try {
     // Lire le fichier SQL
-    const schemaPath = path.join(__dirname, '../database/schema.sql');
+    const schemaPath = path.join(__dirname, './schema.sql');
     const sql = fs.readFileSync(schemaPath, 'utf8');
     
     console.log(`Fichier SQL lu avec succès : ${schemaPath}`);
