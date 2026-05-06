@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const { query } = require('../config/db');
+const { query } = require('../db');
 
 const JWT_SECRET = process.env.JWT_SECRET || 'super_secret_jwt_key_ethnotech';
 
