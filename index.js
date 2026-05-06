@@ -10,14 +10,14 @@ app.use(cors());
 app.use(express.json());
 
 // Import routes
-const motsRouter = require('./routes/mots.routes');
-const authRouter = require('./routes/auth.routes');
-const favoritesRouter = require('./routes/favorites.routes');
-const progressRouter = require('./routes/progress.routes');
-const dictionaryRouter = require('./routes/dictionary.routes');
+const motsRouter = require('./mots.routes');
+const authRouter = require('./auth.routes');
+const favoritesRouter = require('./favorites.routes');
+const progressRouter = require('./progress.routes');
+const dictionaryRouter = require('./dictionary.routes');
 
 // Import DB
-const { pool } = require('./config/db');
+const { pool } = require('./db');
 
 // Routes
 app.use('/api/mots', motsRouter); // Keep for backward compatibility
