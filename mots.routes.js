@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const motsController = require('../controllers/mots.controller');
+const motsController = require('../mots.controller');
 
 // Routes pour les catégories
 router.get('/categories', motsController.getCategories);
